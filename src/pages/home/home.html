@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-item class="trans">
+    <ion-label stacked><button ion-button round color="dark">FROM</button></ion-label>
+    <br><br>
+    <ion-select [(ngModel)]="journey.origin" interface="action-sheet" class="round">
+      <ion-option *ngFor="let i of places">{{i}}</ion-option>
+    </ion-select>
+    <!--<ion-input type="text" [(ngModel)]="journey.origin"></ion-input>-->
+  </ion-item>
+  <ion-item class="trans">
+    <ion-label stacked><button ion-button round color="dark">TO</button></ion-label>
+    <ion-select [(ngModel)]="journey.destination" interface="action-sheet" class="round">
+      <ion-option *ngFor="let i of places">{{i}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <br>
+  <button ion-button block round icon-left (click)="getData()">
+    <ion-icon name="search"></ion-icon>
+    Search
+  </button>
+  <br><br><br><br><br>
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger">
+      <ion-icon name="share"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="logo-facebook" color="primary"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter" color="primary"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus" color="danger"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

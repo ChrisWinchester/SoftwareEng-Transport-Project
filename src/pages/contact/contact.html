@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      SETTINGS
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h3>Please select your home city.</h3>
+  <ion-item class="trans">
+    <ion-label stacked><button ion-button round color="dark">my home city</button></ion-label>
+    <ion-select [(ngModel)]="defaultCity" interface="action-sheet" class="round">
+      <ion-option>Barcelona</ion-option>
+      <ion-option>Dar Es Salaam</ion-option>
+      <ion-option>İstanbul</ion-option>
+      <ion-option>İzmir</ion-option>
+      <ion-option>Madrid</ion-option>
+    </ion-select>
+  </ion-item>
+
+    <button ion-button block round (click)="saveCity()">Save</button>
+
+  <br><br><br><br>
+
+</ion-content>

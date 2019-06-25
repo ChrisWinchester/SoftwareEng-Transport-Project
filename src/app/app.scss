@@ -1,0 +1,16 @@
+ion-content{
+  background-image: url("../assets/imgs/bgimage.jpg");
+  -moz-background-image: url("../assets/imgs/bgimage.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.trans{
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+.round{
+  border-radius: 15px;
+  border: 1px solid #222;
+}
+
